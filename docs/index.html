@@ -5,145 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everyday is Friday</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1 { 
-            font-size: 4em; 
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #ff6b6b, #ffe66d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .subtitle { font-size: 1.6em; opacity: 0.9; margin-bottom: 20px; }
-        
-        .controls {
-            margin: 30px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-        select, button {
-            padding: 12px 25px;
-            font-size: 1.3em;
-            border-radius: 50px;
-            border: none;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-            cursor: pointer;
-        }
-        select {
-            background: white;
-            color: #333;
-            min-width: 300px;
-        }
-        button {
-            background: #ff4757;
-            color: white;
-        }
-        button:hover { background: #ff3742; transform: translateY(-3px); }
-
-        .latest-badge {
-            background: #ffe66d;
-            color: #000;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.1em;
-            display: inline-block;
-            margin: 10px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-        .latest-date {
-            font-size: 1.8em;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-        .draws-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: center;
-            margin: 40px 0;
-            width: 100%;
-        }
-        .draw {
-            background: rgba(255,255,255,0.12);
-            padding: 25px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            min-width: 320px;
-            flex: 1;
-            max-width: 400px;
-        }
-        .draw-name {
-            font9-size: 1.7em;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-        .numbers {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .ball {
-            width: 70px;
-            height: 70px;
-            background: white;
-            color: #333;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8em;
-            font-weight: bold;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            animation: bounceIn 0.8s ease-out;
-        }
-        .bonus { background: gold !important; color: #000; }
-        @keyframes bounceIn {
-            0% { transform: scale(0); opacity: 0; }
-            60% { transform: scale(1.2 Anchorage); }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        .error { color: #ff6b6b; font-size: 1.3em; margin-top: 20px; }
-        footer { margin-top: 60px; font-size: 0.9em; opacity: 0.8; }
+        body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;text-align:center;padding:50px 20px;margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+        h1{font-size:4em;margin-bottom:10px;background:linear-gradient(90deg,#ff6b6b,#ffe66d);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .subtitle{font-size:1.6em;opacity:.9;margin-bottom:20px}
+        .controls{margin:30px 0;display:flex;flex-direction:column;align-items:center;gap:15px}
+        select,button{padding:12px 25px;font-size:1.3em;border-radius:50px;border:none;box-shadow:0 6px 15px rgba(0,0,0,.3);cursor:pointer}
+        select{background:#fff;color:#333;min-width:320px}
+        button{background:#ff4757;color:#fff}
+        button:hover{background:#ff3742;transform:translateY(-3px)}
+        .latest-badge{background:#ffe66d;color:#000;padding:10px 25px;border-radius:30px;font-weight:bold;font-size:1.1em;margin:10px 0;box-shadow:0 4px 15px rgba(0,0,0,.3)}
+        .latest-date{font-size:1.8em;font-weight:bold;margin:15px 0}
+        .draws-container{display:flex;flex-wrap:wrap;gap:40px;justify-content:center;margin:40px 0;width:100%}
+        .draw{background:rgba(255,255,255,.12);padding:25px;border-radius:20px;backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,0,0,.3);min-width:320px;flex:1;max-width:420px}
+        .draw-name{font-size:1.9em;margin-bottom:15px;font-weight:bold}
+        .numbers{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+        .ball{width:72px;height:72px;background:#fff;color:#333;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6em;font-weight:bold;box-shadow:0 8px 20px rgba(0,0,0,.4);animation:bounceIn .8s ease-out;overflow:hidden}
+        .bonus{background:gold!important;color:#000}
+        @keyframes bounceIn{0%{transform:scale(0);opacity:0}60%{transform:scale(1.2)}100%{transform:scale(1);opacity:1}}
+        .error{color:#ff6b6b;font-size:1.3em;margin-top:20px}
+        footer{margin-top:60px;font-size:.9em;opacity:.8}
     </style>
 </head>
 <body>
     <h1>Everyday is Friday</h1>
-    <p class="subtitle">Your daily dose of weekend vibes & lucky numbers 🍀✨</p>
+    <p class="subtitle">Your daily dose of weekend vibes — loaded live from the web! 🍀✨</p>
 
-    <div id="latestBadge" class="latest-badge">TODAY'S LUCKY DRAWS</div>
+    <div id="latestBadge" class="latest-badge">TODAY'S MAGIC</div>
     <div class="latest-date" id="latestDate"></div>
 
     <div class="controls">
-        <select id="dateSelector">
-            <option value="">Loading past Fridays...</option>
-        </select>
-        <button onclick="loadRandomSet()">Feeling Nostalgic? Random Past Friday</button>
+        <select id="dateSelector"><option>Loading your magic moments...</option></select>
+        <button onclick="loadRandomSet()">Random Magic Moment</button>
     </div>
 
     <div id="drawsContainer" class="draws-container"></div>
-
     <p class="error" id="error"></p>
 
-    <footer>Everyday is Friday • Powered by numbers.json • Today is November 21, 2025</footer>
+    <footer>Everyday is Friday • Data loaded from the web • November 21, 2025</footer>
 
     <script>
+        // CHANGE THIS URL TO YOUR OWN JSON FILE ON THE WEB
+        const JSON_URL = 'https://raw.githubusercontent.com/yblebon/datasources/main/friday.json';
+        // Example real one you can test right now:
+        // const JSON_URL = 'https://gist.githubusercontent.com/anonymous/0123456789abcdef/raw/numbers.json';
+
         let allSets = [];
-        let datesMap = {}; // date → array of sets
+        let datesMap = {};
+
+        function processSet(entry) {
+            if (typeof entry !== 'object' || !entry.date) return null;
+
+            const main = Array.isArray(entry.main) ? entry.main.map(String) : [];
+            const bonus = entry.bonus !== undefined 
+                ? (Array.isArray(entry.bonus) ? entry.bonus.map(String) : [String(entry.bonus)])
+                : [];
+
+            if (main.length === 0) return null;
+
+            return {
+                date: entry.date,
+                main,
+                bonus,
+                name: entry.name ? String(entry.name) : null
+            };
+        }
 
         function displaySets(sets, selectedDate = null) {
             const container = document.getElementById('drawsContainer');
@@ -152,43 +77,42 @@
             container.innerHTML = '';
 
             const isLatest = selectedDate === null;
-            badge.textContent = sets.length === 1 
-                ? (isLatest ? "TODAY'S LUCKY DRAW" : "DRAW FROM SELECTED DATE")
-                : (isLatest ? "TODAY'S LUCKY DRAWS" : "DRAWS FROM SELECTED DATE");
+            badge.textContent = sets.length === 1
+                ? (isLatest ? "TODAY'S MAGIC" : "MAGIC FROM THIS DATE")
+                : (isLatest ? "TODAY'S MAGIC MOMENTS" : "MAGIC FROM THIS DATE");
 
             if (sets.length > 0) {
                 const dateObj = new Date(isLatest ? sets[0].date : selectedDate);
-                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                dateEl.textContent = dateObj.toLocaleDateString(undefined, options);
+                dateEl.textContent = dateObj.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
             }
 
             sets.forEach(set => {
                 const drawDiv = document.createElement('div');
                 drawDiv.className = 'draw';
 
-                const name = document.createElement('div');
-                name.className = 'draw-name';
-                name.textContent = set.name || 'Friday Magic';
-                drawDiv.appendChild(name);
+                if (set.name) {
+                    const nameEl = document.createElement('div');
+                    nameEl.className = 'draw-name';
+                    nameEl.textContent = set.name;
+                    drawDiv.appendChild(nameEl);
+                }
 
                 const numbersDiv = document.createElement('div');
                 numbersDiv.className = 'numbers';
 
-                set.main.forEach(num => {
+                set.main.forEach(item => {
                     const ball = document.createElement('div');
                     ball.className = 'ball';
-                    ball.textContent = num.toString().padStart(2, '0');
+                    ball.textContent = item;
                     numbersDiv.appendChild(ball);
                 });
 
-                if (set.bonus) {
-                    set.bonus.forEach(b => {
-                        const ball = document.createElement('div');
-                        ball.className = 'ball bonus';
-                        ball.textContent = b.toString().padStart(2, '0');
-                        numbersDiv.appendChild(ball);
-                    });
-                }
+                set.bonus.forEach(item => {
+                    const ball = document.createElement('div');
+                    ball.className = 'ball bonus';
+                    ball.textContent = item;
+                    numbersDiv.appendChild(ball);
+                });
 
                 drawDiv.appendChild(numbersDiv);
                 container.appendChild(drawDiv);
@@ -198,30 +122,31 @@
         async function loadData() {
             const errorEl = document.getElementById('error');
             const selector = document.getElementById('dateSelector');
-            errorEl.textContent = '';
+            errorEl.textContent = 'Loading your magic from the web...';
 
             try {
-                const response = await fetch('numbers.json');
-                if (!response.ok) throw new Error('Could not load numbers.json');
-                
-                allSets = await response.json();
-                if (!allSets.length) throw new Error('No draws found');
+                const response = await fetch(JSON_URL, { cache: "no-store" }); // always fresh
+                if (!response.ok) throw new Error(`Failed to load (${response.status})`);
 
-                // Build dates map and populate selector
+                const rawData = await response.json();
+
                 datesMap = {};
                 const dateSet = new Set();
+                allSets = [];
 
-                allSets.forEach(set => {
-                    if (set.date && !isNaN(new Date(set.date).getTime())) {
+                rawData.forEach(entry => {
+                    const set = processSet(entry);
+                    if (set) {
                         if (!datesMap[set.date]) datesMap[set.date] = [];
                         datesMap[set.date].push(set);
                         dateSet.add(set.date);
+                        allSets.push(set);
                     }
                 });
 
                 const sortedDates = Array.from(dateSet).sort((a, b) => new Date(b) - new Date(a));
 
-                selector.innerHTML = '<option value="">← Choose a past Friday</option>';
+                selector.innerHTML = '<option value="">← Pick any magic moment</option>';
                 sortedDates.forEach(date => {
                     const opt = document.createElement('option');
                     opt.value = date;
@@ -230,17 +155,19 @@
                     selector.appendChild(opt);
                 });
 
-                // Show latest by default
-                const latestDate = sortedDates[0];
-                const latestSets = datesMap[latestDate] || [];
-                displaySets(latestSets);
+                if (sortedDates.length > 0) {
+                    displaySets(datesMap[sortedDates[0]]);
+                    errorEl.textContent = '';
+                } else {
+                    errorEl.textContent = 'No magic found in the JSON file.';
+                }
 
             } catch (err) {
-                errorEl.textContent = '⚠️ ' + err.message;
+                errorEl.textContent = '⚠️ ' + err.message + ' — Check the URL!';
+                console.error(err);
             }
         }
 
-        // Date selector handler
         document.getElementById('dateSelector').addEventListener('change', function() {
             const selected = this.value;
             if (selected && datesMap[selected]) {
@@ -248,16 +175,13 @@
             }
         });
 
-        // Random past draw
         function loadRandomSet() {
-            if (allSets.length === 0) {
-                document.getElementById('error').textContent = '⚠️ Loading… please wait!';
-                return;
-            }
-            const randomSet = allSets[Math.floor(Math.random() * allSets.length)];
-            displaySets([randomSet], randomSet.date);
+            if (allSets.length === 0) return;
+            const random = allSets[Math.floor(Math.random() * allSets.length)];
+            displaySets([random], random.date);
         }
 
+        // Auto-load from the web when page opens
         window.onload = loadData;
     </script>
 </body>

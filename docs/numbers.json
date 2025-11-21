@@ -1,32 +1,20 @@
 [
   {
-    "name": "Mega Fortune Morning",
+    "name": "🍀 Lucky Friday 🍀",
     "date": "2025-11-27",
-    "main": [7, 14, 23, 28, 41, 44],
-    "bonus": [8, 3, 25]
+    "main": ["03", "17", "🍀", 36, "WIN", 49],
+    "bonus": ["😎", "VIP"]
   },
   {
-    "name": "Mega Fortune Evening",
-    "date": "2025-11-27",
-    "main": [3, 19, 22, 37, 45, 49],
-    "bonus": [12, 89]
+    "name": "Dream Big",
+    "date": "2025-11-21",
+    "main": [7, 14, 23, 28, "🌟", 41],
+    "bonus": "MEGA"
   },
   {
-    "name": "Power Dream",
-    "date": "2025-11-20",
-    "main": [5, 11, 18, 29, 36, 42],
-    "bonus": [3, 9]
-  },
-  {
-    "name": "Jackpot Special",
-    "date": "2025-11-27",
-    "main": [9, 15, 27, 33, 38, 46],
-    "bonus": [5]
-  },
-  {
-    "name": "Thanksgiving Special",
-    "date": "2025-11-27",
-    "main": [12, 18, 25, 31, 39, 47],
-    "bonus": [11]
+    "name": "Party Time 🎉",
+    "date": "2025-11-14",
+    "main": ["YES", "01", "08", "WIN", "35", "44", "VROUm VROUM"],
+    "bonus": ["🎰", "777"]
   }
 ]
